@@ -6,7 +6,7 @@ def divide(dividend, divisor):
 
 
 
-grades = []
+
 
 students = [
     
@@ -21,20 +21,20 @@ students = [
     {"name": "Francisco", "grades": [95, 89, 100, 99]},
     {"name": "Joao", "grades": [100, 100, 100, 100]},
     {"name": "Jose", "grades": [92, 81, 100, 92]},
-    
-    
-    
+    {"name": "Josiane", "grades": []},
+      
 ]
 
-
 print("welcome to the average grade program.")
-
-
 try:
-    average = divide(sum(grades), len(grades))
-except ZeroDivisionError as e:
-    print("there are no grades yet in your list")
+    for student in students:
+        name = student["name"]
+        grades = student["grades"]
+        average = divide(sum(grades), len(grades))
+        print(f"{name} averaged {average}.")
+except ZeroDivisionError:
+    print(f"Error: {name} has no grades!!!!")
 else:
-    print("The average grade is {average}.")
+    print("-- All student averages calculated --")
 finally:
-    print("Thank you!")
+    print("-- End of student average calculation ---")
