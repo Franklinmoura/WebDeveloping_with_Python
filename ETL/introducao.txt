@@ -1,0 +1,30 @@
+
+################### ETL - Extract, transform and load ###############
+
+Data source: --Data Flow / Pipline--
+Operational system, ERP, CRM, SQL, Flat files spredsheets
+Data validation, data cleaning, data transformation, data aggregating, data loadin
+Data warehouse
+Bi - Result: 
+OLAP, Data mining, data visalization, report, dashboard, Alerts
+
+#################### Apache Airflow #########################
+
+Tools: 
+Apache Airflow - Processo para extracao e carregamento dos dados
+Luigi - Permite facilmente construnir ferramentas de recuperacao
+Bonobo - quite de ferramenta para estracao de dados de varias fontes
+Bubble - auditar e processar dados
+Petl - construcao, carregamento e loading de dados - nao utilizado para grande volumes
+Pandas - Transformar os dados, carregar dados. 
+
+######### Links Uteis #############
+http://airflow.apache.org
+https://luigi.readhedocs.io/en/stable
+https://wwww.bonobo-project.org
+http://bubbles.databrewery.org/
+https://petl.readthedocs.io/en/stable
+https://pandas.pydata.org
+
+################ Dados para estudo ############
+https://www2.fab.mil.br/nenipa

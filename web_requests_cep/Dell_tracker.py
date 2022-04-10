@@ -25,4 +25,4 @@ while True:
         webbrowser.open(res)
     if menu == 'Q'.upper():
         break
-print('Thanks for using Dell DPS tracking')u
+print('Thanks for using Dell DPS tracking')
