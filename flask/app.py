@@ -1,3 +1,23 @@
+from flask import Flask, jsonify, request
+import json
+
+
+app = Flask(__name__)
+
+
+@app.route("/")
+
+
+def hello_world():
+    return "Hello, world!"
+
+
+
+@app.route("/fancy")
+def hello_world_fancy():
+    return """
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -82,3 +102,10 @@
     </footer>
 </body>
 </html>
+
+
+"""
+
+if __name__ == '__main__':
+    app.run(debug=True)
+    
