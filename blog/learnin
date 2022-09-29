@@ -1,0 +1,3 @@
+(base) frank@Franklins-MacBook-Pro blog % pyenv exec python -m venv .venv
+(base) frank@Franklins-MacBook-Pro blog % source .venv/bin/activate
+(.venv) (base) frank@Franklins-MacBook-Pro blog % pip install flask

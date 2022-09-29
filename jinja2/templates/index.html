@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data structures in jinja2</title>
+</head>
+<body>
+    <h1>Jinja2 data structure</h1>
+    <h2>List operations</h2>
+
+
+  <div>
+    <p>
+        Jina said her top three favorite movies were {{ movies[0]}},
+        {{movies[1]}}, {{movies[4]}}.
+    </p>
+
+  </div>
+
+  <div>
+      <h1>Favorrite Car</h1>
+
+    Jina said my favorite car is: {{ cars["Brand"] }}, {{ cars["Model"] }}, built in {{ cars["Year"] }}.
+  </div>
+
+  <div>
+    <h1>The customer data structure operationg</h1>
+    The four Galilean  moons of Jupiter are {{ moons.first}}, {{ moons.second }}, {{moons.third}}, {{ moons.fourth}}
+    <p>
+       
+    </p>
+  </div>
+
+  <div>
+      {% if company == "Apple" %}
+      <h1>Availabe apple products</h1>
+
+     <ul>
+        <li>iPhone</li>
+        <li>iPad</li>
+        <li>iMac</li>
+     </ul>
+
+  
+      {% elif company == "Microsoft" %}
+    <h1>Available Microsoft products</h1>
+
+   <ul>
+      <li>Windows 10</li>
+      <li>Windows Server</li>
+      <li>Office</li>
+   </ul>
+
+   {% elif company== "Linux" %}
+   <h1>Available Linux products</h1>
+
+   <ul>
+      <li>Ubuntu</li>
+      <li>Read Hat</li>
+      <li>CentOS</li>
+   </ul>
+   {% else %}
+
+   <p>No {{ company }} product available</p>
+   {% endif %}
+</div>
+
+    
+
+    
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flask-Dropzone Demo: Large File</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./static/css/styles.css"/>
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="navbar__brand">
+      <img class="navbar__logo" src="./static/css/logo.svg" alt="Logs Extractor" />Microblog
+    </div>
+    <ul class="navbar__navigation">
+      <li class="navbar__navigation-item">
+        <a href="#" class="navbar__link">Recent</a>
+      </li>
+      <li class="navbar__navigation-item">
+        <a href="#" class="navbar__link">Calendar</a>
+      </li>
+    </ul>
+   
+</header>
+
+<section>
+      <div>
+        {{ dropzone.load_css() }}
+        {{ dropzone.style('border: 2px dashed #0087F7; margin: 10%; min-height: 300px;') }}
+
+      </div>
+    </section>
+
+</head>
+
+<main class="main"></main>
+
+<section>
+<div>
+  {{ dropzone.create(action='upload') }}
+  {{ dropzone.load_js() }}
+  {{ dropzone.config() }}
+
+</div>
+
+</section>
+
+
+
+</main> 
+
+<footer class="footer">
+  <div class="footer__content">
+    <section class="left">
+      <a class="footer__item">Made by Franklin Ramos de Moura</a>
+      <a class="footer__item">Check out my other projects</a>
+    </section>
+    <section class="right">
+      <div class="footer__column">
+        <a class="footer__item">Recent</a>
+        <a class="footer__item">Calendar</a>
+      </div>
+      <div class="footer__column">
+        <a class="footer__item" href="#">About</a>
+        <a class="footer__item">How this was made</a>
+      </div>
+    </section>
+  </div>
+</footer>
+
+</body>
+
+</html>
