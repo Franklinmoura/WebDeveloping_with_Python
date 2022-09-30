@@ -12,7 +12,7 @@ import patoolib
 import webbrowser
 import datetime
 from flask_dropzone import Dropzone
-from flask import current_app, flash, jsonify, make_response, redirect, request, url_for, render_template
+from flask import Flask, flash, jsonify, make_response, redirect, request, url_for, render_template
 from flask import Blueprint
 basedir = os.path.abspath(os.path.dirname(__file__))
 
