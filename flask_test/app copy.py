@@ -14,6 +14,7 @@ import datetime
 from flask_dropzone import Dropzone
 from flask import current_app, flash, jsonify, make_response, redirect, request, url_for, render_template
 from flask import Blueprint
+
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 app = Flask(__name__)
@@ -33,29 +34,15 @@ def upload():
     if request.method == 'POST':
         f = request.files.get('file')
         f.save(os.path.join(app.config['UPLOADED_PATH'], f.filename))  
-        directory = "LogsExtracted"
-        parent_dir = "."
-        path = os.path.join(parent_dir, directory,( ""+ input("Type the customer's or TSE's name: ") + "-" + datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')))
-        os.makedirs(path)
         for root, subdir, filename in os.walk(".",topdown=False):
-            for file_path in filename:
-                if file_path.endswith('.zip') or file_path.endswith(".tgz"):
-                    name = os.path.join(root, file_path)
-                    patoolib.extract_archive(name, outdir=path)
-                    for root, subdir, filename in os.walk(path):
-                        for file in filename:
-                            if file.endswith(".tgz"):
-                                name = os.path.join(root, file)
-                                patoolib.extract_archive(name, outdir=path)
-                                pass
-                            
-                        
+            for name in filename:
+                if name.endswith(".zip"):
+                    file_path = os.path.join(root, name)
+                    
+                    print(file_path)
+                    
     return render_template('index.html')
  
-
-
-
-
 
 
 if __name__ == '__main__':

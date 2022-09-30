@@ -1,0 +1,34 @@
+# -*- coding: utf-8 -*-
+from crypt import methods
+from distutils.cmd import Command
+from tkinter import Toplevel, Button, Tk, Menu  
+from genericpath import isfile
+import pathlib
+from xml.dom import minidom
+import os
+import re
+import time
+import patoolib
+import webbrowser
+import datetime
+from flask_dropzone import Dropzone
+from flask import current_app, flash, jsonify, make_response, redirect, request, url_for, render_template
+from flask import Blueprint
+
+app = Flask(__name__)
+
+@app.route('/')
+def hello():
+    return render_template("index2.html")
+
+@app.route("/login", methods=["POST", "GET"])
+def login():
+    return render_template()
+
+@app.route("/<usr>")
+def user(usr):
+    return ƒ"<h1>{usr}</h1>"
+
+if __name__ == "__main__":
+    # Launch the Flask dev server
+    app.run(host="localhost", debug=True)

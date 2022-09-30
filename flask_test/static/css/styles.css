@@ -11,14 +11,12 @@ html {
     box-sizing: inherit;
   }
   
-  
   body {
     box-sizing: border-box;
     margin: 0;
   }
   
   .navbar {
-
     background-color: #ffff;
     margin: 50px auto;
     padding: 0 20px;
